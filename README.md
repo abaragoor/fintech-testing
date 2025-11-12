@@ -21,7 +21,8 @@ automation-framework/
 │   ├── ui/
 │   │   ├── test_user_registration_ui.py
 │   │   └── test_transaction_ui.py
-│
+│   |___base_test.py
+|   
 ├── pages/
 │   ├── base_page.py
 │   ├── user_registration_page.py
@@ -36,7 +37,7 @@ automation-framework/
 │   ├── api_client.py
 │   ├── config.py
 │   ├── logger.py
-│   └── report_manager.py
+│   └── assertions.py
 │
 ├── playwright.config.py
 ├── requirements.txt
