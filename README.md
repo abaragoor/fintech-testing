@@ -43,7 +43,9 @@ automation-framework/
 └── README.md
 
 #How to use this Framework
-Unzip and enter the folder:
+
+#1 Unzip and enter the folder:
+
 unzip automation-framework.zip -d automation-framework
 cd automation-framework
 Create and activate a virtualenv, then install deps:
@@ -53,12 +55,19 @@ pip install -r requirements.txt
 Install Playwright browsers:
 playwright install
 
-#Setting the ENV to "dev" or "staging" or "production" server before executing the commands.
+#2 Setting the ENV to "dev" or "staging" or "production" server before executing the test commands in "config.py"
 
-#Run tests:
+#3 Run tests:
 pytest — runs all tests
 pytest tests/api — API tests only
 pytest tests/ui --headed — UI tests (open browser)
 
-#Generate Reports
+#4 Generate Reports
 pytest --html=reports/report.html --self-contained-html
+
+| Category                 | Description                                      | Example                                                         |
+| ------------------------ | ------------------------------------------------ | --------------------------------------------------------------- |
+| **CRUD**                 | Create, Read, Update, Delete operations          | `test_create_user`, `test_delete_transaction`                   |
+| **Error Handling**       | Simulate missing fields, invalid IDs, duplicates | `test_create_user_missing_email`, `test_get_user_invalid_id`    |
+| **Data Validation**      | Check server rejects invalid email, type, etc.   | `test_create_user_invalid_email_format`                         |
+| **Auth / Authorization** | Ensure endpoints enforce security                | `test_get_user_unauthorized`, `test_create_transaction_no_auth` |

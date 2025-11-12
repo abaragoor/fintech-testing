@@ -1,0 +1,7 @@
+playwright
+pytest
+pytest-playwright
+pytest-asyncio
+requests
+pytest-html
+faker

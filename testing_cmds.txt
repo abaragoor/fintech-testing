@@ -1,0 +1,5 @@
+pytest --html=reports/report.html --self-contained-html
+#API Tests
+pytest tests/api --html=reports/api_report.html
+UI Tests 
+pytest tests/ui --headed --html=reports/ui_report.html
