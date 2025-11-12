@@ -11,9 +11,9 @@ import os
 ENV = os.getenv("ENV", "dev").lower()
 
 BASE_URLS = {
-    "dev": "http://localhost:5000",  # mock frontend
-    "staging": "https://mock-ui.staging",
-    "prod": "https://mock-ui.prod"
+    "dev": "http://localhost:3000",
+    "staging": "https://floqast-api.staging",
+    "prod": "https://floqast-api.prod"
 }
 
 BASE_URL = BASE_URLS.get(ENV, BASE_URLS["dev"])
