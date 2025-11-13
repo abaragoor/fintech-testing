@@ -1,0 +1,17 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "accountType": "premium"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "accountType": "standard"
+  },
+  {
+    "name": "Robert Brown",
+    "email": "robert.brown@example.com",
+    "accountType": "basic"
+  }
+]

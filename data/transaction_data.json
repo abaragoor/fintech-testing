@@ -1,0 +1,20 @@
+[
+  {
+    "userId": "123",
+    "recipientId": "456",
+    "amount": 100.50,
+    "type": "transfer"
+  },
+  {
+    "userId": "789",
+    "recipientId": "321",
+    "amount": 250.00,
+    "type": "payment"
+  },
+  {
+    "userId": "555",
+    "recipientId": "777",
+    "amount": 75.25,
+    "type": "deposit"
+  }
+]
