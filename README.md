@@ -13,35 +13,32 @@ Copyright 2025 - Arati Baragoor
 #Automation Structure
 automation-framework/
 │
-├── tests/
-│   ├── api/
-│   │   ├── test_users_api.py
-│   │   ├── test_transactions_api.py
-│   │
-│   ├── ui/
-│   │   ├── test_user_registration_ui.py
-│   │   └── test_transaction_ui.py
-│   |___base_test.py
-|   
-├── pages/
-│   ├── base_page.py
-│   ├── user_registration_page.py
-│   └── transaction_page.py
-│
+├── conftest.py                 ← screenshot hook + report integration
+├── playwright.config.py        ← environment + browser settings
+├── mock_frontend/
+│   ├── server.py
+│   └── templates/...
 ├── data/
 │   ├── test_data_factory.py
 │   ├── user_data.json
 │   └── transaction_data.json
-│
+├── pages/
+│   ├── base_page.py
+│   ├── user_registration_page.py
+│   └── transaction_page.py
+├── tests/
+│   ├── api/...
+│   └── ui/...
 ├── utils/
 │   ├── api_client.py
-│   ├── config.py
 │   ├── logger.py
-│   └── assertions.py
-│
-├── playwright.config.py
+│   ├── config.py
+│   └── report_manager.py
+├── reports/
+│   └── (generated output)
 ├── requirements.txt
 └── README.md
+
 
 #How to use this Framework
 
