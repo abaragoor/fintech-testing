@@ -15,7 +15,7 @@ automation-framework/
 │
 ├── conftest.py                 ← screenshot hook + report integration
 ├── playwright.config.py        ← environment + browser settings
-├── mock_frontend/
+├── floqast_frontend/
 │   ├── server.py
 │   └── templates/...
 ├── data/

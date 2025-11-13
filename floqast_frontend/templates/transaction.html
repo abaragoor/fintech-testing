@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transaction</title>
+  </head>
+  <body>
+    <h1>Transaction</h1>
+    <form id="txnForm" method="post" action="/transaction">
+      <label>UserId: <input id="userId" name="userId"/></label><br/>
+      <label>RecipientId: <input id="recipientId" name="recipientId"/></label><br/>
+      <label>Amount: <input id="amount" name="amount" /></label><br/>
+      <button id="submit" type="submit">Create</button>
+    </form>
+    <script>
+      document.getElementById('txnForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        var form = e.target;
+        fetch('/transaction', {method:'POST', body: new FormData(form)}).then(r=>r.json()).then(j=>{
+          document.body.innerHTML = '<div>Transaction Created: ' + (j.amount||j.error) + '</div>'
+        })
+      })
+    </script>
+  </body>
+</html>
